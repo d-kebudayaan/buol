@@ -2,22 +2,52 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DKB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Culture Sulawesi Tengah</title>
+  <meta
+    name="description"
+    content="Merawat Warisan, Menghidupkan Cerita, Melestarikan Budaya Provinsi Sulawesi Tengah."
+  />
   <link rel="icon" href="https://i.ibb.co.com/vCYX5d2q/DKB.png" />
+
+  <!-- Metadata Pratinjau Media Sosial -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Digital Culture Sulawesi Tengah" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:url" content="https://lripuku.my.id/" />
+  <meta property="og:title" content="Digital Culture Sulawesi Tengah" />
+  <meta
+    property="og:description"
+    content="Merawat Warisan, Menghidupkan Cerita, Melestarikan Budaya Provinsi Sulawesi Tengah."
+  />
+  <meta
+    property="og:image"
+    content="https://digital-culture-sulawesi-tengah.ai.studio/og-default.jpg"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digital Culture Sulawesi Tengah" />
+  <meta
+    name="twitter:description"
+    content="Merawat Warisan, Menghidupkan Cerita, Melestarikan Budaya Provinsi Sulawesi Tengah."
+  />
+  <meta
+    name="twitter:image"
+    content="https://digital-culture-sulawesi-tengah.ai.studio/og-default.jpg"
+  />
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #eee;
-      overflow: hidden; /* Mencegah scroll ganda */
+      background-color: #FBF9F5;
+      overflow: hidden;
     }
 
     .iframe-container {
       width: 100%;
-      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
+      height: 100dvh;
       overflow: hidden;
     }
 
@@ -33,13 +63,28 @@
   <div class="iframe-container">
     <iframe
       id="app"
-      src="https://digital-culture-sulawesi-tengah.ai.studio/"
+      src="about:blank"
       scrolling="yes"
       allowfullscreen="true"
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
-      allow="fullscreen; camera; microphone; display-capture; geolocation;">
+      allow="clipboard-write; clipboard-read; web-share; fullscreen; camera; microphone; display-capture; geolocation;">
     </iframe>
   </div>
+
+  <script>
+    (function () {
+      var BASE = 'https://digital-culture-sulawesi-tengah.ai.studio';
+      var path = window.location.pathname || '/';
+      if (!path.startsWith('/') || path.startsWith('//')) {
+        path = '/';
+      }
+      var target = BASE + path + (window.location.search || '') + (window.location.hash || '');
+      var iframe = document.getElementById('app');
+      if (iframe) {
+        iframe.src = target;
+      }
+    })();
+  </script>
 </body>
 </html>
